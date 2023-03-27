@@ -1,0 +1,312 @@
+@import "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css";
+
+body {
+    height: 100vh; 
+    text-align: center;
+}
+  /* Pour centrer le texte de l'en-tête */
+  header h1 {
+    text-align: center;
+    font-size: 3rem;
+    -webkit-animation: text-focus-in 0.65s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+	        animation: text-focus-in 0.65s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+          
+  }
+  
+  /* Pour ajouter une marge en haut et en bas de l'en-tête */
+  header {
+    margin: 50px 0;
+  }
+  
+  /* Pour aligner les colonnes du contenu */
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  /* Pour donner une largeur aux colonnes du contenu */
+  .col {
+    width: 50%;
+    float: left;
+  }
+  
+  /* Pour ajouter un peu d'espace entre les colonnes */
+  .col + .col {
+    padding-left: 50px;
+  }
+  
+  /* Pour ajouter une marge en haut et en bas des sections */
+  section {
+    margin: 50px 0;
+  }
+  
+  /* Pour donner une largeur aux images */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Pour ajouter un peu d'espace autour des images */
+  img {
+    margin: 10px 0;
+  }
+  
+  /* Pour aligner le texte des paragraphes */
+  p {
+    text-align: justify;
+  }
+  
+  table {
+    border-collapse: collapse;
+    margin: 20px auto;
+    width: 80%;
+    border: 1px solid gray;
+    -webkit-animation: jello-horizontal 1.25s both;
+	        animation: jello-horizontal 1.25s both;
+  }
+  
+  th {
+    background-color: #22222233;
+    color: #fff;
+    font-weight: bold;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid gray;
+  }
+  
+  td {
+    border: 1px solid #ccc;
+    padding: 25px;
+    text-align: center;
+    border: 1px solid gray;
+  }
+  
+  
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  tr:hover {
+    background-color: #e6f7ff;
+  }
+  
+  a {
+    color: #333;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: #222;
+  }
+  
+  .preview {
+    position: relative;
+  }
+  
+  .preview span {
+    display: none;
+    position: absolute;
+    z-index: 9999;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #333;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 14px;
+  }
+  
+  .preview:hover span {
+    display: block;
+  }
+  
+  .preview img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  footer {
+    width: 80%;
+    padding: 0;
+    margin-top: 200px;
+    margin-left: 10%;
+    margin-right: 10%;
+    bottom: 5px;
+  }
+  footer .columns {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0;
+  }
+  
+  footer .footer-title {
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  
+  footer .footer-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  footer .footer-list li {
+    margin-bottom: 0.5rem;
+  }
+  
+  footer .footer-list li a {
+    color: #6c757d;
+  }
+  
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .social-icons li {
+    margin: 0 0.5rem;
+  }
+  
+  .social-icons a {
+    color: #6c757d;
+  }
+  
+  .social-icons a:hover {
+    color: #007bff;
+  }
+
+  .social-icons .fab {
+    font-size: 1.8rem;
+  }
+
+  .preview-td {
+    position: relative;
+  }
+  
+  .gruge {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 16px;
+    width: 18px;
+  }
+
+  iframe {
+    -webkit-animation: flip-in-diag-1-tr 0.65s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: flip-in-diag-1-tr 0.65s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  }
+  @-webkit-keyframes flip-in-diag-1-tr {
+    0% {
+      -webkit-transform: rotate3d(1, 1, 0, -80deg);
+              transform: rotate3d(1, 1, 0, -80deg);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: rotate3d(1, 1, 0, 0deg);
+              transform: rotate3d(1, 1, 0, 0deg);
+      opacity: 1;
+    }
+  }
+  @keyframes flip-in-diag-1-tr {
+    0% {
+      -webkit-transform: rotate3d(1, 1, 0, -80deg);
+              transform: rotate3d(1, 1, 0, -80deg);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: rotate3d(1, 1, 0, 0deg);
+              transform: rotate3d(1, 1, 0, 0deg);
+      opacity: 1;
+    }
+  }
+  @-webkit-keyframes text-focus-in {
+    0% {
+      -webkit-filter: blur(12px);
+              filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-filter: blur(0px);
+              filter: blur(0px);
+      opacity: 1;
+    }
+  }
+  @keyframes text-focus-in {
+    0% {
+      -webkit-filter: blur(12px);
+              filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-filter: blur(0px);
+              filter: blur(0px);
+      opacity: 1;
+    }
+  }
+  
+  @-webkit-keyframes jello-horizontal {
+    0% {
+      -webkit-transform: scale3d(1, 1, 1);
+              transform: scale3d(1, 1, 1);
+    }
+    30% {
+      -webkit-transform: scale3d(1.25, 0.75, 1);
+              transform: scale3d(1.25, 0.75, 1);
+    }
+    40% {
+      -webkit-transform: scale3d(0.75, 1.25, 1);
+              transform: scale3d(0.75, 1.25, 1);
+    }
+    50% {
+      -webkit-transform: scale3d(1.15, 0.85, 1);
+              transform: scale3d(1.15, 0.85, 1);
+    }
+    65% {
+      -webkit-transform: scale3d(0.95, 1.05, 1);
+              transform: scale3d(0.95, 1.05, 1);
+    }
+    75% {
+      -webkit-transform: scale3d(1.05, 0.95, 1);
+              transform: scale3d(1.05, 0.95, 1);
+    }
+    100% {
+      -webkit-transform: scale3d(1, 1, 1);
+              transform: scale3d(1, 1, 1);
+    }
+  }
+  @keyframes jello-horizontal {
+    0% {
+      -webkit-transform: scale3d(1, 1, 1);
+              transform: scale3d(1, 1, 1);
+    }
+    30% {
+      -webkit-transform: scale3d(1.25, 0.75, 1);
+              transform: scale3d(1.25, 0.75, 1);
+    }
+    40% {
+      -webkit-transform: scale3d(0.75, 1.25, 1);
+              transform: scale3d(0.75, 1.25, 1);
+    }
+    50% {
+      -webkit-transform: scale3d(1.15, 0.85, 1);
+              transform: scale3d(1.15, 0.85, 1);
+    }
+    65% {
+      -webkit-transform: scale3d(0.95, 1.05, 1);
+              transform: scale3d(0.95, 1.05, 1);
+    }
+    75% {
+      -webkit-transform: scale3d(1.05, 0.95, 1);
+              transform: scale3d(1.05, 0.95, 1);
+    }
+    100% {
+      -webkit-transform: scale3d(1, 1, 1);
+              transform: scale3d(1, 1, 1);
+    }
+  }
+  
